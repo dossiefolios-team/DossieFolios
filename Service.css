@@ -1,0 +1,79 @@
+.services h3{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(83, 79, 65);
+    margin: 0;
+    padding: 0;
+    
+}
+.services .Box
+{
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30),0 15px 12px rgba(0,0,0,0.22);
+    position: relative; 
+}
+.services h2{
+    font-size: 48px;
+    color: wheat;
+    margin-bottom: 18px;
+    margin-top: 0;
+}
+.services{
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    background-image: url('./img/service_1.jpg');
+    background-size: cover; 
+    height: 90px;
+    border-radius: 10px;
+   
+     
+      
+}
+.services > .row
+{
+    display: flex;
+    justify-content: space-around;
+    
+     
+}
+.services > .row h4{
+    margin-bottom: 8px;
+    font-family: inherit;
+    line-height: 1.2;
+    font-weight: 500;
+    color: inherit;
+    font-size: 24px;
+    color: white;
+}
+.services > .row p{
+    font-size: 16px;
+    color: white;
+}
+.services > .row > .single-service{
+     background-color: grey;
+     padding-top: 10px;
+     padding-left: 8px;
+     padding-right: 8px;
+     border-radius: 10px;
+     width: 280px;
+     box-shadow: 0 19px 38px rgba(0,0,0,0.30),0 15px 12px rgba(168, 117, 117, 0.89);
+      
+     
+}
+.services > .row span{
+    background-color: white;
+    width: 112px;
+    height: 112px;
+    display:inline-block;
+    border-radius: 50%; 
+    font-size: 36px;
+    color: #416af0;
+    line-height: 120px;
+}
