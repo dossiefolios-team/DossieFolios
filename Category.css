@@ -1,0 +1,52 @@
+.contact
+{
+     margin-top: 250px;
+     background: rgba(66, 119, 235, 0.8);
+     height: 250px; 
+     border-radius: 10px;
+     opacity: 0.9;
+
+}
+.check{
+    margin-left: 50px;
+}
+.check h1
+{
+    color: white;
+
+    
+}  
+.check p
+{
+    color: white;
+    letter-spacing: 2px;
+    margin-left: 20px;
+} 
+.check ion-icon
+{
+     color: white;
+     font-size: 30px;
+     padding-left: 280px
+     
+}
+.check > .mailc   
+{
+      padding-left: 350px;
+      margin-top: -85px;
+}
+.mailc p
+{
+   margin-left: 180px;
+    margin-top: 20px;
+} 
+.check > .call
+{
+    padding-left: 700px;
+    margin-top: -85px;
+}
+.call p
+{
+    padding-left: 200px;
+    margin-top: 20px;
+
+}
