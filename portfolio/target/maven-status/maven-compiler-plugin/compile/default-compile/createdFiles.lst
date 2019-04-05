@@ -1,0 +1,5 @@
+com\dossiefolios\Repository\UserRepository.class
+com\dossiefolios\portfolio\dao\UserDAO.class
+com\dossiefolios\controller\UserController.class
+com\dossiefolios\portfolio\domain\User.class
+com\dossiefolios\portfolio\PortfolioApplication.class
