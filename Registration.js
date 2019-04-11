@@ -17,6 +17,8 @@ export default class Registration extends Component {
             uname: '',
             pass: '',
             email: '',
+            phone: '',
+            isadmin:'',
             loading: false,
             message: ''
         }
@@ -31,16 +33,19 @@ export default class Registration extends Component {
     postData(event)
     {
         event.preventDefault();
-        const name=this.state.uname;
-        const pass=this.state.pass;
+        const username=this.state.uname;
+        const password=this.state.pass;
         const email=this.state.email;
+        const phone=this.state.phone;
         this.setState({loading: true})
         const regisData={
-            name,
-            pass,
-            email
+            username,
+            password,
+            email,
+            phone
+            
         }
-        axios.post('/t/lyyg4-1554869078/post',regisData).then(response=>{
+        axios.post('/t/h9dl5-1554964464/post',regisData).then(response=>{
             this.setState({
                 loading: false,
                 message: response.regisData
@@ -74,7 +79,7 @@ export default class Registration extends Component {
               <Modal 
                     visible={this.state.visible}
                     width="400"
-                    height="500"
+                    height="590"
                     effect="fadeInUp"
                     
                  >
@@ -85,7 +90,10 @@ export default class Registration extends Component {
                         <div className="Rbox">
                          <input type="text" name="uname" placeholder="UserName" value={this.state.uname}  onChange={this.dataChange.bind(this)} required="true" autoComplete="off"/>
                          <input type="password" name="pass" placeholder="Password" value={this.state.pass} onChange={this.dataChange.bind(this)} required="true"/><br/>
-                         <input type="text" name="email" placeholder="Email" value={this.state.email} onChange={this.dataChange.bind(this)} required="true" autoComplete="off"/><br/>
+                         <input type="email" name="email" placeholder="Email" value={this.state.email} onChange={this.dataChange.bind(this)} required="true" autoComplete="off"/><br/>
+                         <input type="number" pattern="[1-9]{1}[0-9]{9}" name="phone" placeholder="Phone" value={this.state.ph} onChange={this.dataChange.bind(this)} required="true" autoComplete="off"/><br/>
+                         <input type="radio" name="category" value="Admin" id="admin_field"/><label for="admin_field">Admin</label>
+                         <input type="radio" name="category" value="User" id="user_field"/><label for="user_field">User</label> 
                          <button type="submit" className="Rbutton1">Submit</button>
                          </div>   
                     </form>
