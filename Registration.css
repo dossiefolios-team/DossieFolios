@@ -13,7 +13,7 @@ section > Modal
 .Rbox
 {
     width: 300px;
-    height: 380px;
+    height: 500px;
     background-color: #191919;  
     font-family: sans-serif;  
     margin-left: auto; 
@@ -21,9 +21,9 @@ section > Modal
      
 
 }
-.Rbox > input[type="text"], .Rbox >input[type="password"] 
+.Rbox > input[type="text"], .Rbox >input[type="password"], .Rbox >input[type="number"],.Rbox >input[type="email"]
 {
-    margin-top: 50px; 
+    margin-top: 40px; 
     margin-right: 50px;
     margin-left: 35px;
     border: 0;
@@ -62,7 +62,12 @@ section > Modal
     border-radius: 24px;
     transition: 0.25s;
 }
- 
+.Rbox > input[type="radio"] 
+{
+    margin-left: 55px; 
+    margin-top: 35px;
+
+} 
  
 .Rbox > h4
 {
@@ -72,5 +77,5 @@ section > Modal
 }
 h4
 {
-     color: #2ecc71;
+    color: #2ecc71;
 }
