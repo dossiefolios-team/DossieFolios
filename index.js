@@ -9,7 +9,8 @@ import Category from './Category';
 import Service from './Service';
 import Login from './Login';
 import Registration from './Registration';
- 
+import Admin from './Admin';
+import Team from './Team'; 
  
 import * as serviceWorker from './serviceWorker';
 import Contact from './Contact';
@@ -23,6 +24,7 @@ class App extends Component
             <Header title="Let’s Explore Idea!" heading="NOW YOU CAN WATCH THE TALENT" button="Explore Now"/>
             <Category/>
             <Service/>
+            <Team/>
             <Contact/>
             <AboutUs/>
             </div>
@@ -36,4 +38,3 @@ ReactDOM.render(<App/>,document.getElementById('root'));
  
 serviceWorker.unregister();
 export default App;
-
