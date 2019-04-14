@@ -1,5 +1,9 @@
-com\dossiefolios\Repository\UserRepository.class
+com\dossiefolios\portfolio\controller\ProfileController.class
+com\dossiefolios\portfolio\controller\UserController.class
+com\dossiefolios\portfolio\dao\ProfileDAO.class
 com\dossiefolios\portfolio\dao\UserDAO.class
-com\dossiefolios\controller\UserController.class
+com\dossiefolios\portfolio\domain\Profile.class
+com\dossiefolios\portfolio\Repository\UserRepository.class
 com\dossiefolios\portfolio\domain\User.class
 com\dossiefolios\portfolio\PortfolioApplication.class
+com\dossiefolios\portfolio\Repository\ProfileRepository.class

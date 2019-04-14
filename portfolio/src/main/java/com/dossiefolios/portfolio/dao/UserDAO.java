@@ -2,12 +2,8 @@ package com.dossiefolios.portfolio.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.dossiefolios.portfolio.domain.User;
-
-import com.dossiefolios.Repository.UserRepository;
-
-
+import com.dossiefolios.portfolio.Repository.UserRepository;
 import java.util.*;
 
 @Service
@@ -27,9 +23,20 @@ public class UserDAO {
 		return (List<User>) userRepository.findAll();
 	}
 	/*get an user by id*/
-	public User findOne(Long userid) {
-		return userRepository.getOne(userid);
+	public User findOne(String username) {
+		return userRepository.findOne(username);
 	}
+	
+	public User findOne(Long userid) {
+		return userRepository.findOne(userid);
+	}
+	
+	//@Override
+//	public User findByUsername(String username) {
+//		User byname = userRepository.findByUsername(username);	
+//		return byname;
+//	}
+	
 	
 	/*Delete an user*/
 	public void delete(User user) {

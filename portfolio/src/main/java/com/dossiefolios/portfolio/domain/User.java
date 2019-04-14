@@ -6,39 +6,49 @@ import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+
 //import org.hibernate.validator.constriants.NotBlank;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name="user")
+@NamedQuery(name = "User.fetchByUserid", query = "SELECT u FROM User u WHERE u.userid =: id")
 @EntityListeners(AuditingEntityListener.class)
 public class User {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "User_Id", unique = true, nullable = false)
-	private Long user_id;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "User_Id")
+	private Long userid;
 	
-	@Column(name = "Username", unique = true, nullable = false)
+	
+	@Column(name = "Username")
 	private String username;
 	
-	@Column(name = "Password", unique = true, nullable = false)
+	@Column(name = "Password")
 	private String password;
 	
-	@Column(name = "IsAdmin", unique = true, nullable = false)
+	//@Column(name = "IsAdmin")
 	private boolean isadmin;
 	
-	@Column(name = "Phone", unique = true, nullable = false)
-	private int phone;
+	@Column(name = "Phone")
+	private String phone;
+	
+	@Column(name="Email")
+	private String email;
 	
 	
-	public Long getUser_id() {
-		return user_id;
+	public Long getUserid() {
+		return userid;
 	}
 
-	public void setUser_id(Long user_id) {
-		this.user_id = user_id;
+	public void setUserid(Long userid) {
+		this.userid = userid;
 	}
 
 	public String getUsername() {
@@ -48,7 +58,14 @@ public class User {
 	public void setUsername(String username) {
 		this.username = username;
 	}
+	
+	public String getEmail() {
+		return email;
+	}
 
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public String getPassword() {
 		return password;
 	}
@@ -65,15 +82,12 @@ public class User {
 		this.isadmin = isadmin;
 	}
 
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-
-
 	
-		
 }

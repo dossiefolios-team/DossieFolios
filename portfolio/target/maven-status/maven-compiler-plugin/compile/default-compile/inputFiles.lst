@@ -1,5 +1,9 @@
+E:\DossiefoliosBackend\portfolio\src\main\java\com\dossiefolios\portfolio\controller\ProfileController.java
 E:\DossiefoliosBackend\portfolio\src\main\java\com\dossiefolios\portfolio\PortfolioApplication.java
+E:\DossiefoliosBackend\portfolio\src\main\java\com\dossiefolios\portfolio\Repository\ProfileRepository.java
 E:\DossiefoliosBackend\portfolio\src\main\java\com\dossiefolios\portfolio\domain\User.java
-E:\DossiefoliosBackend\portfolio\src\main\java\com\dossiefolios\Repository\UserRepository.java
+E:\DossiefoliosBackend\portfolio\src\main\java\com\dossiefolios\portfolio\controller\UserController.java
+E:\DossiefoliosBackend\portfolio\src\main\java\com\dossiefolios\portfolio\domain\Profile.java
+E:\DossiefoliosBackend\portfolio\src\main\java\com\dossiefolios\portfolio\Repository\UserRepository.java
 E:\DossiefoliosBackend\portfolio\src\main\java\com\dossiefolios\portfolio\dao\UserDAO.java
-E:\DossiefoliosBackend\portfolio\src\main\java\com\dossiefolios\controller\UserController.java
+E:\DossiefoliosBackend\portfolio\src\main\java\com\dossiefolios\portfolio\dao\ProfileDAO.java
