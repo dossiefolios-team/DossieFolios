@@ -1,0 +1,73 @@
+.containerUpdate{
+    padding:10px;
+    margin:10px;
+    margin-left:210px;
+    border:2px solid #eee;
+    box-shadow:0 4px 4px #ccc;
+    height:100vh;
+    border-radius: 20px;
+}
+ 
+.imagearya
+{
+   border-radius:  100%;
+   style: none;
+   height: 150px;
+   width: 150px;
+   margin-top : -50px;
+   margin-left: 70px;
+}
+button{
+    margin-left: 85px;  
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background-color: #ab47bc;
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;        
+}
+.front
+{
+    box-sizing: border-box;
+    box-shadow: 0 4px 4px #ccc; 
+    border-radius: 10px;
+    width: 300px;
+    height: 220px;
+    margin-left: 400px;
+    margin-top: 300px;
+}
+.front > p
+{
+     text-align: center;
+}
+.back
+{
+   
+    box-sizing: border-box;
+    box-shadow: 0 4px 4px #ccc; 
+    border-radius: 10px;
+    width: 300px;
+    height: 220px;
+    margin-left: 400px;
+    margin-top: 300px;
+}
+.back >p{
+    font-size: 16px;
+    font-family: sans-serif;
+    text-align: center;
+}
+.back > i
+{
+    padding: 16px 16px;
+    padding-top: 50px;
+    margin-left: 20px;
+    
+}
+.back> button
+{
+    margin-left: 110px;
+}
