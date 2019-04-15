@@ -23,14 +23,16 @@ public class UserDAO {
 		return (List<User>) userRepository.findAll();
 	}
 	/*get an user by id*/
-	public User findOne(String username) {
-		return userRepository.findOne(username);
-	}
-	
+//	public User findOne(String username) {
+//		return userRepository.findOne(username);
+//	}
+//	
 	public User findOne(Long userid) {
-		return userRepository.findOne(userid);
+		return userRepository.getOne(userid);
 	}
-	
+	public List<User> fetchByUsername(String username){
+		return userRepository.fetchByUsername(username);
+	}
 	//@Override
 //	public User findByUsername(String username) {
 //		User byname = userRepository.findByUsername(username);	
