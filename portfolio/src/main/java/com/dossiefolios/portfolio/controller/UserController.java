@@ -4,6 +4,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,15 +13,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.dossiefolios.portfolio.Repository.UserRepository;
-
 import com.dossiefolios.portfolio.dao.UserDAO;
 import com.dossiefolios.portfolio.domain.User;
 
 @RestController
 @RequestMapping(value="portfolio", produces = { "application/json", "application/xml" })
-
+@CrossOrigin(origins = "http://localhost:3000")
 public class UserController {
 	
 	@Autowired
@@ -29,7 +28,6 @@ public class UserController {
 	/*Save an User to DB*/
 	
 	@PostMapping ("/users")
-	//@CrossOrigin(origins = "http://localhost:3000")
 	public User createUser(@Validated @RequestBody User user ) {
 		System.out.println(user);
 		return userDAO.save(user);
@@ -39,7 +37,6 @@ public class UserController {
 	/*get all users*/
 
 	@PostMapping ("/users/all")
-	//@CrossOrigin(origins = "http://localhost:3000/")
 	public List<User> getAllUsers() {
 		return userDAO.findAll();
 	}
@@ -47,24 +44,20 @@ public class UserController {
 	
 	/*get user by userid*/
 	@GetMapping("/users/all/{id}")
-	public ResponseEntity<User> getUserById(@PathVariable(value="id") String username) {
+	public ResponseEntity<User> getUserById(@PathVariable(value="id") Long userid) {
 		
-		User user = userDAO.findOne(username);		
+		User user = userDAO.findOne(userid);		
 		if(user==null) {
 			return ResponseEntity.notFound().build();
 		}
 		return ResponseEntity.ok().body(user);
 		
 	}
-//	@GetMapping("/users/{id}")
-//    public List<User> fetchByUserid(Long userid) {
-//        return userRepository.fetchByUserid(userid);
-//    }
-//
-//	@GetMapping("/users/all/{id}")
-//	public User getUserById(@PathVariable(value="id") String username){	
-//		return  userDAO.findByUsername(username);		
-//	}
+	@GetMapping("/users/{id}")
+    public List<User> fetchByUsername(@PathVariable(value="id") String username) {
+        return userDAO.fetchByUsername(username);
+    }
+	
 	
 	
 	/*Update an user by userid*/
